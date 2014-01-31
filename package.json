@@ -1,0 +1,25 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "ejs": "*",
+    "ejs-locals": "*",
+    "mongoose": "*",
+    "nconf": "*",
+    "winston": "*",
+    "connect-mongo": "*",
+    "async": "*",
+    "connect": "*",
+    "cookie": "*",
+    "caminte": "*",
+    "connect-roles": "*",
+    "orm": "*",
+    "mongodb": "*",
+    "mysql": "*"
+  }
+}

@@ -1,0 +1,36 @@
+<% layout('../layouts/page') %>
+<% block('title', "Users") %>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Email</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>City</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(var i in models) { %>
+      <% var model = models[i]; %>
+      <tr>
+        <td><%= model.id %></td>
+        <td><%= model.email %></td>
+        <td><%= model.created %></td>
+        <td><%= model.updated %></td>
+        <td><%= model.cityId %></td>
+        <td><%= model.firstName %></td>
+        <td><%= model.lastName %></td>
+        <td>
+          <a href="/user/<%= model.id %>"><i class="glyphicon glyphicon-eye-open"></i></a>
+          <a href="/user/<%= model.id %>/update"><i class="glyphicon glyphicon-pencil"></i></a>
+          <a href="/user/<%= model.id %>/delete"><i class="glyphicon glyphicon-remove"></i></a>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
